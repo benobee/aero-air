@@ -13,14 +13,9 @@ const App = {
      */
     registerAPIControllers () {
         controller.watch([{
-                name: "blog",
-                el: "#collection-5a81023c53450a498144b8d7"
-            },
-            {
-                name: "navbar",
-                el: ".Header.Header--top"
-            }
-        ]);
+            name: "navbar",
+            el: ".Header.Header--top"
+        }]);
     }
 };
 

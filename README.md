@@ -2,29 +2,107 @@
 
 ### Table of Contents
 
--   [registerControllers][1]
--   [elementIsActive][2]
+-   [registerAPIControllers][1]
+-   [Controller][2]
+    -   [elementIsActive][3]
+        -   [Parameters][4]
+    -   [watch][5]
+        -   [Parameters][6]
+-   [findOne][7]
+    -   [Parameters][8]
+-   [find][9]
+    -   [Parameters][10]
+-   [api][11]
+    -   [Examples][12]
 
-## registerControllers
+## registerAPIControllers
 
 events are bound to the controller when
 elements are found within the DOM.
 
-## elementIsActive
+## Controller
+
+Bind events to active DOM elements
+through publish / subscribe
+
+### elementIsActive
 
 Tests whether the node is active in the DOM
 
-**Parameters**
+#### Parameters
 
--   `query` **[String][3]** query selector
+-   `query` **[String][13]** query selector
 
-Returns **[Object][4]** DOM Node
+Returns **[HTMLElement][14]** DOM Node
 
-[1]: #registercontrollers
+### watch
 
-[2]: #elementisactive
+emit event when the DOM element is active
 
-[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+#### Parameters
 
-[4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
-# aero-air
+-   `array` **[Array][15]** list of nodes
+
+## findOne
+
+returns only one element
+
+### Parameters
+
+-   `query` **[String][13]** the dom selector
+
+Returns **[HTMLElement][14]** 
+
+## find
+
+returns an a node list of all available elements
+
+### Parameters
+
+-   `query` **[String][13]** the dom selector
+
+Returns **[NodeList][16]** 
+
+## api
+
+abstracted out for readability
+
+### Examples
+
+```javascript
+controller.on("navbar", (el) => {
+  navbar.init();
+});
+```
+
+[1]: #registerapicontrollers
+
+[2]: #controller
+
+[3]: #elementisactive
+
+[4]: #parameters
+
+[5]: #watch
+
+[6]: #parameters-1
+
+[7]: #findone
+
+[8]: #parameters-2
+
+[9]: #find
+
+[10]: #parameters-3
+
+[11]: #api
+
+[12]: #examples
+
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[14]: https://developer.mozilla.org/docs/Web/HTML/Element
+
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[16]: https://developer.mozilla.org/docs/Web/API/NodeList

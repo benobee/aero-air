@@ -1,3 +1,10 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "workbench.colorTheme": "Firewatch Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "files.autoSave": "off",
+  "livereload.port": 9000,
+  "editor.minimap.enabled": false
 }
