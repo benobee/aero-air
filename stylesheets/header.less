@@ -1,5 +1,10 @@
 @gold: #d3a765;
 
+/* adjusting for fixed nav */
+.Content-outer {
+  margin-top: 60px;
+}
+
 .Mega-menu {
   position: fixed;
   left: 0;
@@ -48,11 +53,16 @@
     }
     .Mega-menu-nav-content {
       margin-left: 121px;
-      padding-top: 1em;
     }
     .Mega-menu-nav-item {
       display: inline-block;
       width: 200px;
+      padding-top: 1em;
+      &.active {
+        a {
+          color: white;
+        }
+      }
     }
     .Mega-menu-nav-item--folder {
       .Mega-menu-nav-folder {
@@ -69,6 +79,12 @@
   left: 0;
   right: 0;
   top: 0;
+
+  .Header-nav.Header-nav--primary {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
   &:hover {
     .Mega-menu {
       border-top: 2px solid rgb(39, 39, 39);
@@ -77,10 +93,9 @@
       transition: transform 0.4s;
     }
   }
-
-  .Header-nav-item {
-    width: 135px;
-    position: relative;
+  .link-styles {
+    padding-bottom: 37px !important;
+    padding-top: 37px !important;
     &.active,
     &:hover {
       &:after {
@@ -96,8 +111,22 @@
       left: 0;
       right: 0;
       bottom: 0;
-      transform: translateY(29px);
+      transform: translateY(0px);
       transition: width 0.3s 0.1s;
+    }
+  }
+  .Header-nav-item {
+    width: 135px;
+    position: relative;
+    padding-bottom: 37px !important;
+    padding-top: 37px !important;
+    .link-styles;
+  }
+  .Header-nav-item.Header-nav-item--folder {
+    width: 135px;
+    position: relative;
+    a {
+      .link-styles;
     }
   }
 }

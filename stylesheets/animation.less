@@ -1,0 +1,23 @@
+@gold: #d3a765;
+
+@media screen and (min-width: 1024px) {
+  #collection-5b3a7db62b6a28e875d2d759 {
+    .Index-page--has-image:not(#intro) {
+      overflow: hidden;
+      .Index-page-content {
+        background: rgba(10, 10, 10, 0.8);
+        max-width: 50%;
+        margin-left: 0;
+        transform: translateX(-100%);
+        transition: transform 400ms ease-in-out;
+        border-right: 4px solid @gold;
+        box-shadow: 5px 5px 10px rgba(10, 10, 10, 0.5);
+      }
+      &[data-scrollmap-is-visible="true"] {
+        .Index-page-content {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
