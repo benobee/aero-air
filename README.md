@@ -2,25 +2,32 @@
 
 ### Table of Contents
 
--   [run pub/sub events][1]
--   [events are bound to the controller when
-    elements are found within the DOM.][2]
+-   [App][1]
+-   [DOMContentLoaded][2]
 -   [Controller][3]
     -   [elementIsActive][4]
         -   [Parameters][5]
     -   [watch][6]
         -   [Parameters][7]
--   [findOne][8]
-    -   [Parameters][9]
--   [find][10]
-    -   [Parameters][11]
--   [api][12]
-    -   [Examples][13]
+-   [DOM][8]
+    -   [findOne][9]
+        -   [Parameters][10]
+    -   [find][11]
+        -   [Parameters][12]
+-   [api][13]
+    -   [Examples][14]
+-   [Scrollmap][15]
+-   [navbar][16]
+    -   [Parameters][17]
 
-## run pub/sub events
+## App
 
-## events are bound to the controller when
-elements are found within the DOM.
+the main object for housing all
+methods, events, and objects
+
+## DOMContentLoaded
+
+waits for the DOM to beloaded before initializing
 
 ## Controller
 
@@ -33,9 +40,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][14]** query selector
+-   `query` **[String][18]** query selector
 
-Returns **[HTMLElement][15]** DOM Node
+Returns **[HTMLElement][19]** DOM Node
 
 ### watch
 
@@ -43,31 +50,36 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][16]** list of nodes
+-   `array` **[Array][20]** list of nodes
 
-## findOne
+## DOM
+
+a simple DOM caching module
+
+### findOne
 
 returns only one element
 
-### Parameters
+#### Parameters
 
--   `query` **[String][14]** the dom selector
+-   `query` **[String][18]** the dom selector
 
-Returns **[HTMLElement][15]** 
+Returns **[HTMLElement][19]** 
 
-## find
+### find
 
 returns an a node list of all available elements
 
-### Parameters
+#### Parameters
 
--   `query` **[String][14]** the dom selector
+-   `query` **[String][18]** the dom selector
 
-Returns **[NodeList][17]** 
+Returns **[NodeList][21]** 
 
 ## api
 
-abstracted out for readability
+callbacks will be executed whenever the particular element is 
+detected inthe DOM. Using custom DOM element subscriber.
 
 ### Examples
 
@@ -77,9 +89,25 @@ controller.on("navbar", (el) => {
 });
 ```
 
-[1]: #run-pubsub-events
+## Scrollmap
 
-[2]: #events-are-bound-to-the-controller-when--elements-are-found-within-the-dom
+using custom element in viewport detection library. 
+Executes callbacks and adds data hooks for 
+CSS manipulation
+
+## navbar
+
+Interaction events bound to the navbar
+this module abstracted out of the api
+module for readability
+
+### Parameters
+
+-   `parent` **[Element][22]** the root element bound to the controller
+
+[1]: #app
+
+[2]: #domcontentloaded
 
 [3]: #controller
 
@@ -91,22 +119,32 @@ controller.on("navbar", (el) => {
 
 [7]: #parameters-1
 
-[8]: #findone
+[8]: #dom
 
-[9]: #parameters-2
+[9]: #findone
 
-[10]: #find
+[10]: #parameters-2
 
-[11]: #parameters-3
+[11]: #find
 
-[12]: #api
+[12]: #parameters-3
 
-[13]: #examples
+[13]: #api
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[14]: #examples
 
-[15]: https://developer.mozilla.org/docs/Web/HTML/Element
+[15]: #scrollmap
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[16]: #navbar
 
-[17]: https://developer.mozilla.org/docs/Web/API/NodeList
+[17]: #parameters-4
+
+[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[19]: https://developer.mozilla.org/docs/Web/HTML/Element
+
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[21]: https://developer.mozilla.org/docs/Web/API/NodeList
+
+[22]: https://developer.mozilla.org/docs/Web/API/Element

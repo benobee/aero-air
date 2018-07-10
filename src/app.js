@@ -1,27 +1,33 @@
 import controller from "./core/controller";
 import api from "./api/api";
 
+/**
+ * the main object for housing all
+ * methods, events, and objects
+ * @name App
+ */
 const App = {
     /**
-     * @name init
+     * The main initializing method
      * @event run pub/sub events
      * @memberof App
      */
-    init () {
+    init() {
         // run subscription events
         this.api = api();
         // run publish events
         this.registerAPIControllers();
     },
 
-    //
     /**
+     * Method for registering controllers
+     * throught the controller module
      * @name registerAPIControllers
      * @event events are bound to the controller when
      * elements are found within the DOM.
      * @memberof App
      */
-    registerAPIControllers () {
+    registerAPIControllers() {
         controller.watch([{
                 name: "navbar",
                 el: ".Header.Header--top"
@@ -34,7 +40,10 @@ const App = {
     }
 };
 
-// on dom content load
+/**
+ * waits for the DOM to beloaded before initializing
+ * @event DOMContentLoaded
+ */
 document.addEventListener("DOMContentLoaded", () => {
     App.init();
 });

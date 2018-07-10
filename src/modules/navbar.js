@@ -1,3 +1,10 @@
+/**
+ * Interaction events bound to the navbar
+ * this module abstracted out of the api
+ * module for readability
+ * @name navbar
+ * @param {Element} parent the root element bound to the controller
+ */
 const navbar = (parent) => {
     // convert nodelist to array and cache the nav items
     const navItems = [].slice.call(parent.querySelectorAll(".Header-nav-item"));
@@ -23,8 +30,8 @@ const navbar = (parent) => {
             if (index) {
                 activeState(navItems, "active", false);
                 activeState(megaNavItems, "active", false);
-                navItems[ index - 1 ].classList.add("active");
-                megaNavItems[ index - 1 ].classList.add("active");
+                navItems[index - 1].classList.add("active");
+                megaNavItems[index - 1].classList.add("active");
             }
         });
         el.addEventListener("mouseleave", () => {
