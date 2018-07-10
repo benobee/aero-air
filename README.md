@@ -2,22 +2,24 @@
 
 ### Table of Contents
 
--   [registerAPIControllers][1]
--   [Controller][2]
-    -   [elementIsActive][3]
-        -   [Parameters][4]
-    -   [watch][5]
-        -   [Parameters][6]
--   [findOne][7]
-    -   [Parameters][8]
--   [find][9]
-    -   [Parameters][10]
--   [api][11]
-    -   [Examples][12]
+-   [run pub/sub events][1]
+-   [events are bound to the controller when
+    elements are found within the DOM.][2]
+-   [Controller][3]
+    -   [elementIsActive][4]
+        -   [Parameters][5]
+    -   [watch][6]
+        -   [Parameters][7]
+-   [findOne][8]
+    -   [Parameters][9]
+-   [find][10]
+    -   [Parameters][11]
+-   [api][12]
+    -   [Examples][13]
 
-## registerAPIControllers
+## run pub/sub events
 
-events are bound to the controller when
+## events are bound to the controller when
 elements are found within the DOM.
 
 ## Controller
@@ -31,9 +33,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][13]** query selector
+-   `query` **[String][14]** query selector
 
-Returns **[HTMLElement][14]** DOM Node
+Returns **[HTMLElement][15]** DOM Node
 
 ### watch
 
@@ -41,7 +43,7 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][15]** list of nodes
+-   `array` **[Array][16]** list of nodes
 
 ## findOne
 
@@ -49,9 +51,9 @@ returns only one element
 
 ### Parameters
 
--   `query` **[String][13]** the dom selector
+-   `query` **[String][14]** the dom selector
 
-Returns **[HTMLElement][14]** 
+Returns **[HTMLElement][15]** 
 
 ## find
 
@@ -59,9 +61,9 @@ returns an a node list of all available elements
 
 ### Parameters
 
--   `query` **[String][13]** the dom selector
+-   `query` **[String][14]** the dom selector
 
-Returns **[NodeList][16]** 
+Returns **[NodeList][17]** 
 
 ## api
 
@@ -75,34 +77,36 @@ controller.on("navbar", (el) => {
 });
 ```
 
-[1]: #registerapicontrollers
+[1]: #run-pubsub-events
 
-[2]: #controller
+[2]: #events-are-bound-to-the-controller-when--elements-are-found-within-the-dom
 
-[3]: #elementisactive
+[3]: #controller
 
-[4]: #parameters
+[4]: #elementisactive
 
-[5]: #watch
+[5]: #parameters
 
-[6]: #parameters-1
+[6]: #watch
 
-[7]: #findone
+[7]: #parameters-1
 
-[8]: #parameters-2
+[8]: #findone
 
-[9]: #find
+[9]: #parameters-2
 
-[10]: #parameters-3
+[10]: #find
 
-[11]: #api
+[11]: #parameters-3
 
-[12]: #examples
+[12]: #api
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[13]: #examples
 
-[14]: https://developer.mozilla.org/docs/Web/HTML/Element
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[15]: https://developer.mozilla.org/docs/Web/HTML/Element
 
-[16]: https://developer.mozilla.org/docs/Web/API/NodeList
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[17]: https://developer.mozilla.org/docs/Web/API/NodeList

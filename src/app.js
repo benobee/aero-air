@@ -2,18 +2,26 @@ import controller from "./core/controller";
 import api from "./api/api";
 
 const App = {
-    init() {
+    /**
+     * @name init
+     * @event run pub/sub events
+     * @memberof App
+     */
+    init () {
         // run subscription events
         this.api = api();
         // run publish events
         this.registerAPIControllers();
     },
 
+    //
     /**
-     * events are bound to the controller when
+     * @name registerAPIControllers
+     * @event events are bound to the controller when
      * elements are found within the DOM.
+     * @memberof App
      */
-    registerAPIControllers() {
+    registerAPIControllers () {
         controller.watch([{
                 name: "navbar",
                 el: ".Header.Header--top"

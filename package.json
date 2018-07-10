@@ -7,9 +7,10 @@
         "test": "mocha",
         "start": "concurrently \"webpack --progress --colors --watch --open --config ./config/webpack/webpack.dev.js\" \"yarn run sqs\"",
         "watch": "./node_modules/.bin/webpack -d --watch --colors",
-        "build": "webpack -p --config ./config/webpack/webpack.prod.js&&documentation build --output ./README.md --format md",
+        "build": "webpack -p --config ./config/webpack/webpack.prod.js&&yarn run docs",
         "dev": "webpack-dev-server ./main.js --hot --watch --colors --open --config ./config/webpack/webpack.dev.js",
-        "sqs": "squarespace-server https://aero-air.squarespace.com --auth -d ./template"
+        "sqs": "squarespace-server https://aero-air.squarespace.com --auth -d ./template",
+        "docs": "documentation build --output ./README.md --format md"
     },
     "babel": {
         "presets": [
