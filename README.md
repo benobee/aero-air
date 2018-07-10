@@ -3,31 +3,38 @@
 ### Table of Contents
 
 -   [App][1]
--   [DOMContentLoaded][2]
--   [Controller][3]
-    -   [elementIsActive][4]
-        -   [Parameters][5]
-    -   [watch][6]
-        -   [Parameters][7]
--   [DOM][8]
-    -   [findOne][9]
-        -   [Parameters][10]
-    -   [find][11]
-        -   [Parameters][12]
--   [api][13]
-    -   [Examples][14]
--   [Scrollmap][15]
--   [navbar][16]
-    -   [Parameters][17]
+    -   [init][2]
+    -   [registerAPIControllers][3]
+-   [Controller][4]
+    -   [elementIsActive][5]
+        -   [Parameters][6]
+    -   [watch][7]
+        -   [Parameters][8]
+-   [DOM][9]
+    -   [findOne][10]
+        -   [Parameters][11]
+    -   [find][12]
+        -   [Parameters][13]
+-   [api][14]
+    -   [Examples][15]
+-   [Scrollmap][16]
+-   [navbar][17]
+    -   [Parameters][18]
 
 ## App
 
 the main object for housing all
 methods, events, and objects
 
-## DOMContentLoaded
+### init
 
-waits for the DOM to beloaded before initializing
+The main initializing method for
+establishign pub / sub events
+
+### registerAPIControllers
+
+Method for registering controllers
+throught the controller module
 
 ## Controller
 
@@ -40,9 +47,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][18]** query selector
+-   `query` **[String][19]** query selector
 
-Returns **[HTMLElement][19]** DOM Node
+Returns **[HTMLElement][20]** DOM Node
 
 ### watch
 
@@ -50,7 +57,7 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][20]** list of nodes
+-   `array` **[Array][21]** list of nodes
 
 ## DOM
 
@@ -62,9 +69,9 @@ returns only one element
 
 #### Parameters
 
--   `query` **[String][18]** the dom selector
+-   `query` **[String][19]** the dom selector
 
-Returns **[HTMLElement][19]** 
+Returns **[HTMLElement][20]** 
 
 ### find
 
@@ -72,9 +79,9 @@ returns an a node list of all available elements
 
 #### Parameters
 
--   `query` **[String][18]** the dom selector
+-   `query` **[String][19]** the dom selector
 
-Returns **[NodeList][21]** 
+Returns **[NodeList][22]** 
 
 ## api
 
@@ -103,48 +110,50 @@ module for readability
 
 ### Parameters
 
--   `parent` **[Element][22]** the root element bound to the controller
+-   `parent` **[Element][23]** the root element bound to the controller
 
 [1]: #app
 
-[2]: #domcontentloaded
+[2]: #init
 
-[3]: #controller
+[3]: #registerapicontrollers
 
-[4]: #elementisactive
+[4]: #controller
 
-[5]: #parameters
+[5]: #elementisactive
 
-[6]: #watch
+[6]: #parameters
 
-[7]: #parameters-1
+[7]: #watch
 
-[8]: #dom
+[8]: #parameters-1
 
-[9]: #findone
+[9]: #dom
 
-[10]: #parameters-2
+[10]: #findone
 
-[11]: #find
+[11]: #parameters-2
 
-[12]: #parameters-3
+[12]: #find
 
-[13]: #api
+[13]: #parameters-3
 
-[14]: #examples
+[14]: #api
 
-[15]: #scrollmap
+[15]: #examples
 
-[16]: #navbar
+[16]: #scrollmap
 
-[17]: #parameters-4
+[17]: #navbar
 
-[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[18]: #parameters-4
 
-[19]: https://developer.mozilla.org/docs/Web/HTML/Element
+[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[20]: https://developer.mozilla.org/docs/Web/HTML/Element
 
-[21]: https://developer.mozilla.org/docs/Web/API/NodeList
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[22]: https://developer.mozilla.org/docs/Web/API/Element
+[22]: https://developer.mozilla.org/docs/Web/API/NodeList
+
+[23]: https://developer.mozilla.org/docs/Web/API/Element

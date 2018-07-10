@@ -8,8 +8,8 @@ import api from "./api/api";
  */
 const App = {
     /**
-     * The main initializing method
-     * @event run pub/sub events
+     * The main initializing method for
+     * establishign pub / sub events
      * @memberof App
      */
     init() {
@@ -23,8 +23,6 @@ const App = {
      * Method for registering controllers
      * throught the controller module
      * @name registerAPIControllers
-     * @event events are bound to the controller when
-     * elements are found within the DOM.
      * @memberof App
      */
     registerAPIControllers() {
@@ -43,6 +41,7 @@ const App = {
 /**
  * waits for the DOM to beloaded before initializing
  * @event DOMContentLoaded
+ * @private
  */
 document.addEventListener("DOMContentLoaded", () => {
     App.init();
