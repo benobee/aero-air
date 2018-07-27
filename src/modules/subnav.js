@@ -28,6 +28,9 @@ const subnav = {
                     this.toggleActiveSubnav(e.currentTarget);
                     this.toggleActivePages(target);
                 } else {
+                    if (window.innerWidth < 881) {
+                        this.subnavContainer.classList.toggle("active");
+                    }
                     target = this.parent.querySelector(`#${this.currentFolder}-${selector}`);
                     console.log(`#${this.currentFolder}-${selector}`);
                     this.toggleActivePages(target);
