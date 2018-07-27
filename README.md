@@ -85,7 +85,7 @@ Returns **[NodeList][22]**
 
 ## api
 
-callbacks will be executed whenever the particular element is 
+callbacks will be executed whenever the particular element is
 detected inthe DOM. Using custom DOM element subscriber.
 
 ### Examples
@@ -98,8 +98,8 @@ controller.on("navbar", (el) => {
 
 ## Scrollmap
 
-using custom element in viewport detection library. 
-Executes callbacks and adds data hooks for 
+uses custom element in viewport detection library.
+Executes callbacks and adds data hooks for
 CSS manipulation
 
 ## navbar

@@ -12,7 +12,7 @@ const App = {
      * establishign pub / sub events
      * @memberof App
      */
-    init() {
+    init () {
         // run subscription events
         this.api = api();
         // run publish events
@@ -25,7 +25,7 @@ const App = {
      * @name registerAPIControllers
      * @memberof App
      */
-    registerAPIControllers() {
+    registerAPIControllers () {
         controller.watch([{
                 name: "navbar",
                 el: ".Header.Header--top"
@@ -33,6 +33,10 @@ const App = {
             {
                 name: "homepage",
                 el: "#collection-5b3a7db62b6a28e875d2d759"
+            },
+            {
+                name: "portal",
+                el: "#collection-5b589a3e758d46c96f04f595"
             }
         ]);
     }

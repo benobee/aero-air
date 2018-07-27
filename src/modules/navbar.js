@@ -30,8 +30,8 @@ const navbar = (parent) => {
             if (index) {
                 activeState(navItems, "active", false);
                 activeState(megaNavItems, "active", false);
-                navItems[index - 1].classList.add("active");
-                megaNavItems[index - 1].classList.add("active");
+                navItems[ index - 1 ].classList.add("active");
+                megaNavItems[ index - 1 ].classList.add("active");
             }
         });
         el.addEventListener("mouseleave", () => {

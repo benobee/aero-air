@@ -1,9 +1,10 @@
 import controller from "../core/controller";
 import navbar from "../modules/navbar";
 import Scrollmap from "scrollmap";
+import subnav from "../modules/subnav";
 
 /**
- * callbacks will be executed whenever the particular element is 
+ * callbacks will be executed whenever the particular element is
  * detected inthe DOM. Using custom DOM element subscriber.
  * @name api
  * @example
@@ -16,18 +17,19 @@ const api = () => {
         // abstracted for readability
         navbar(parent);
     });
-
+    controller.on("portal", (parent) => {
+        subnav.init(parent);
+    });
     controller.on("homepage", () => {
-
         /**
-         * using custom element in viewport detection library. 
-         * Executes callbacks and adds data hooks for 
+         * uses custom element in viewport detection library.
+         * Executes callbacks and adds data hooks for
          * CSS manipulation
          * @module Scrollmap
          */
         Scrollmap.trigger({
             target: ".Index-page--has-image:not(#intro)",
-            surfaceVisible: 0.85
+            surfaceVisible: 0.75
         });
     });
 };

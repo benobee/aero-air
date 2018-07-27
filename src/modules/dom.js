@@ -10,7 +10,7 @@ const DOM = {
      * @memberof DOM
      * @returns {HTMLElement}
      */
-    findOne(query) {
+    findOne (query) {
         return document.querySelector(query);
     },
 
@@ -20,7 +20,7 @@ const DOM = {
      * @memberof DOM
      * @returns {NodeList}
      */
-    find(query) {
+    find (query) {
         return document.querySelectorAll(query);
     }
 };
