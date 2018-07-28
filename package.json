@@ -5,7 +5,7 @@
     "main": "main.js",
     "scripts": {
         "test": "mocha",
-        "start": "concurrently \"webpack --progress --colors --watch --open --config ./config/webpack/webpack.dev.js\" \"yarn run sqs\"",
+        "start": "webpack --progress --colors --watch --open --config ./config/webpack/webpack.dev.js",
         "watch": "./node_modules/.bin/webpack -d --watch --colors",
         "build": "webpack -p --config ./config/webpack/webpack.prod.js&&yarn run docs",
         "dev": "webpack-dev-server ./main.js --hot --watch --colors --open --config ./config/webpack/webpack.dev.js",
