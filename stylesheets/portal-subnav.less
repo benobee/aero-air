@@ -1,0 +1,157 @@
+/* Portal Area */
+
+#collection-5b589a3e758d46c96f04f595 {
+    /* Because the sidebar is a fixed nav the foooter
+  will need to have a left margin to accomodate 
+  scrolling */
+    .Site {
+        background: #1e1e1e;
+    }
+    @media screen and (min-width: @tablet) {
+        .Footer {
+            margin-left: 28.8%;
+        }
+    }
+    .Index {
+        display: grid;
+        padding-top: 1em;
+        grid-template-columns: 1.3fr 3.2fr;
+        min-height: 100vh;
+        @media screen and (min-width: @tablet) {
+            #portal-sub-nav {
+                @width: 250px;
+                .Index-page-content {
+                    flex: 0 0 250px;
+                }
+                .Index-page-content {
+                    position: fixed;
+                    overflow: auto;
+                    bottom: 0;
+                    top: 85px;
+                    width: 250px;
+                    margin-left: 2vw;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        @media screen and (max-width: @tabletMax) {
+            padding-top: 0;
+        }
+        @media screen and (max-width: @mobile) {
+            padding-top: 2em;
+            min-height: 100%;
+            grid-template-columns: 100vw;
+            #portal-sub-nav {
+                position: fixed;
+                z-index: 3;
+                left: 0;
+                right: 0;
+                z-index: 44;
+                &.active {
+                    top: 125px;
+                    bottom: 0;
+                    overflow: auto;
+                }
+                .Index-page-content {
+                    flex: 1 0 100%;
+                }
+            }
+        }
+    }
+    .Index-page {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    #portal-sub-nav {
+        display: block;
+        background: #1e1e1e;
+        p {
+            color: white;
+            opacity: 0.7;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            border-bottom: 1px solid @gold;
+            display: inline;
+            padding-bottom: 5px;
+        }
+        /* markdown block list used for operation index */
+        .sqs-block-markdown {
+            ul {
+                padding: 0;
+                list-style-type: none;
+                li {
+                    cursor: pointer;
+                    color: grey;
+                    border-bottom: 2px solid #2e2e2e;
+                    margin-bottom: 5px;
+                    ul {
+                        display: none;
+                        padding-top: 0.25em;
+                        padding-bottom: 0.5em;
+                        margin-left: 1em;
+                        li {
+                            border-bottom: 0;
+                            color: hsla(41, 47%, 54%, 0.8);
+                        }
+                    }
+                    &.active {
+                        ul {
+                            display: block;
+                        }
+                    }
+                    &.active,
+                    &:hover {
+                        color: @gold;
+                    }
+                }
+            }
+        }
+        .Index-page-content {
+            display: flex;
+            justify-content: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            position: relative;
+        }
+        @media screen and (max-width: @mobile) {
+            .Index-page-content {
+                padding-bottom: 0;
+                padding-top: 0;
+            }
+            p {
+                cursor: pointer;
+                &:after {
+                    content: "▼";
+                    margin-left: 10px;
+                    color: @gold;
+                }
+            }
+            .sqs-block-markdown {
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s;
+                margin-top: -40px;
+                width: 100%;
+            }
+            &.active {
+                .sqs-block-markdown {
+                    margin-top: 0;
+                    overflow: auto;
+                    height: 100%;
+                    opacity: 1;
+                    z-index: 3;
+                    visibility: visible;
+                }
+                p {
+                    &:after {
+                        content: "▲";
+                    }
+                }
+            }
+        }
+    }
+}

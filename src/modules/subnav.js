@@ -1,4 +1,3 @@
-import "../../stylesheets/subnav.less";
 import PubSub from "../core/pubsub";
 
 const events = new PubSub();

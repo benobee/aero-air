@@ -4,6 +4,7 @@
         "es6": true,
         "browser": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module"
     },
@@ -12,24 +13,21 @@
         "Flickity": true,
         "Draggable": true,
         "Isotope": true,
-        "ga":true,
-        "hljs":true,
-        "jQuery":true,
-        "muut":true,
-        "StripeCheckout":true,
+        "ga": true,
+        "hljs": true,
+        "jQuery": true,
+        "muut": true,
+        "StripeCheckout": true,
         "Localize": true,
         "Modernizr": true,
         "google": true,
-        "require":true,
-
-        // Squarespace specific
+        "require": true,
         "Y": true,
         "ImageLoader": true,
         "Static": true,
         "Squarespace": true
     },
     "rules": {
-        // Possible Errors
         "no-console": 0,
         "valid-jsdoc": [
             2,
@@ -44,9 +42,6 @@
         ],
         "valid-typeof": 2,
         "no-unexpected-multiline": 2,
-
-
-        // Best Practices
         "complexity": [
             0,
             1
@@ -91,8 +86,7 @@
         "no-new": 2,
         "no-octal-escape": 2,
         "no-octal": 2,
-        "no-param-reassign": 0, // Switch to 2 ?
-        //"no-process-env": 2,
+        "no-param-reassign": 0,
         "no-proto": 2,
         "no-redeclare": 2,
         "no-return-assign": [
@@ -121,15 +115,11 @@
             2,
             "never"
         ],
-
-
         // Strict Mode
         "strict": [
             2,
             "never"
         ],
-
-
         // Variables
         "init-declarations": [
             2,
@@ -145,11 +135,7 @@
         "no-undefined": 1,
         "no-unused-vars": 2,
         "no-use-before-define": 0, // Switch to 2 ?
-
-
         // Node.js and CommonJS
-
-
         // Stylistic Issues
         "array-bracket-spacing": [
             2,
@@ -200,7 +186,15 @@
                 "min": 2,
                 "max": 37,
                 "properties": "never",
-                "exceptions": ["$", "e", "i", "j", "x", "y", "z"]
+                "exceptions": [
+                    "$",
+                    "e",
+                    "i",
+                    "j",
+                    "x",
+                    "y",
+                    "z"
+                ]
             }
         ],
         //"id-match": [2, "^[a-z]+([A-Z][a-z]+)*$", {"properties": false}],
@@ -295,7 +289,7 @@
         "sort-vars": 0,
         "keyword-spacing": [
             2,
-           {
+            {
                 "before": true,
                 "after": true
             }
@@ -326,8 +320,6 @@
             0
         ],
         "wrap-regex": 0,
-
-
         // ECMAScript 6
         "arrow-parens": [
             2,
