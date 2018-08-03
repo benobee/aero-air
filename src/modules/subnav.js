@@ -128,6 +128,7 @@ const subnav = {
      * returns the value name when queried
      * with the index number of the subnav list
      * @param {Number} index index number
+     * @private
      * @returns {String}
      */
     findSubnavFolderByIndex (index) {

@@ -21,9 +21,7 @@
 -   [Scrollmap][17]
 -   [navbar][18]
     -   [Parameters][19]
--   [findSubnavFolderByIndex][20]
-    -   [Parameters][21]
--   [bindEvents][22]
+-   [bindEvents][20]
 
 ## App
 
@@ -53,9 +51,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][23]** query selector
+-   `query` **[String][21]** query selector
 
-Returns **[HTMLElement][24]** DOM Node
+Returns **[HTMLElement][22]** DOM Node
 
 ### watch
 
@@ -63,7 +61,7 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][25]** list of nodes
+-   `array` **[Array][23]** list of nodes
 
 ## DOM
 
@@ -75,9 +73,9 @@ returns only one element
 
 #### Parameters
 
--   `query` **[String][23]** the dom selector
+-   `query` **[String][21]** the dom selector
 
-Returns **[HTMLElement][24]** 
+Returns **[HTMLElement][22]** 
 
 ### find
 
@@ -85,9 +83,9 @@ returns an a node list of all available elements
 
 #### Parameters
 
--   `query` **[String][23]** the dom selector
+-   `query` **[String][21]** the dom selector
 
-Returns **[NodeList][26]** 
+Returns **[NodeList][24]** 
 
 ## api
 
@@ -116,18 +114,7 @@ module for readability
 
 ### Parameters
 
--   `parent` **[Element][27]** the root element bound to the controller
-
-## findSubnavFolderByIndex
-
-returns the value name when queried
-with the index number of the subnav list
-
-### Parameters
-
--   `index` **[Number][28]** index number
-
-Returns **[String][23]** 
+-   `parent` **[Element][25]** the root element bound to the controller
 
 ## bindEvents
 
@@ -171,20 +158,14 @@ bind all DOM events for the subnav
 
 [19]: #parameters-4
 
-[20]: #findsubnavfolderbyindex
+[20]: #bindevents
 
-[21]: #parameters-5
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[22]: #bindevents
+[22]: https://developer.mozilla.org/docs/Web/HTML/Element
 
-[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[24]: https://developer.mozilla.org/docs/Web/HTML/Element
+[24]: https://developer.mozilla.org/docs/Web/API/NodeList
 
-[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-[26]: https://developer.mozilla.org/docs/Web/API/NodeList
-
-[27]: https://developer.mozilla.org/docs/Web/API/Element
-
-[28]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[25]: https://developer.mozilla.org/docs/Web/API/Element
