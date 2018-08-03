@@ -5,21 +5,25 @@
 -   [App][1]
     -   [init][2]
     -   [registerAPIControllers][3]
--   [Controller][4]
-    -   [elementIsActive][5]
-        -   [Parameters][6]
-    -   [watch][7]
-        -   [Parameters][8]
--   [DOM][9]
-    -   [findOne][10]
-        -   [Parameters][11]
-    -   [find][12]
-        -   [Parameters][13]
--   [api][14]
-    -   [Examples][15]
--   [Scrollmap][16]
--   [navbar][17]
-    -   [Parameters][18]
+    -   [subnav][4]
+-   [Controller][5]
+    -   [elementIsActive][6]
+        -   [Parameters][7]
+    -   [watch][8]
+        -   [Parameters][9]
+-   [DOM][10]
+    -   [findOne][11]
+        -   [Parameters][12]
+    -   [find][13]
+        -   [Parameters][14]
+-   [api][15]
+    -   [Examples][16]
+-   [Scrollmap][17]
+-   [navbar][18]
+    -   [Parameters][19]
+-   [findSubnavFolderByIndex][20]
+    -   [Parameters][21]
+-   [bindEvents][22]
 
 ## App
 
@@ -36,6 +40,8 @@ establishign pub / sub events
 Method for registering controllers
 throught the controller module
 
+### subnav
+
 ## Controller
 
 Bind events to active DOM elements
@@ -47,9 +53,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][19]** query selector
+-   `query` **[String][23]** query selector
 
-Returns **[HTMLElement][20]** DOM Node
+Returns **[HTMLElement][24]** DOM Node
 
 ### watch
 
@@ -57,7 +63,7 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][21]** list of nodes
+-   `array` **[Array][25]** list of nodes
 
 ## DOM
 
@@ -69,9 +75,9 @@ returns only one element
 
 #### Parameters
 
--   `query` **[String][19]** the dom selector
+-   `query` **[String][23]** the dom selector
 
-Returns **[HTMLElement][20]** 
+Returns **[HTMLElement][24]** 
 
 ### find
 
@@ -79,9 +85,9 @@ returns an a node list of all available elements
 
 #### Parameters
 
--   `query` **[String][19]** the dom selector
+-   `query` **[String][23]** the dom selector
 
-Returns **[NodeList][22]** 
+Returns **[NodeList][26]** 
 
 ## api
 
@@ -110,7 +116,22 @@ module for readability
 
 ### Parameters
 
--   `parent` **[Element][23]** the root element bound to the controller
+-   `parent` **[Element][27]** the root element bound to the controller
+
+## findSubnavFolderByIndex
+
+returns the value name when queried
+with the index number of the subnav list
+
+### Parameters
+
+-   `index` **[Number][28]** index number
+
+Returns **[String][23]** 
+
+## bindEvents
+
+bind all DOM events for the subnav
 
 [1]: #app
 
@@ -118,42 +139,52 @@ module for readability
 
 [3]: #registerapicontrollers
 
-[4]: #controller
+[4]: #subnav
 
-[5]: #elementisactive
+[5]: #controller
 
-[6]: #parameters
+[6]: #elementisactive
 
-[7]: #watch
+[7]: #parameters
 
-[8]: #parameters-1
+[8]: #watch
 
-[9]: #dom
+[9]: #parameters-1
 
-[10]: #findone
+[10]: #dom
 
-[11]: #parameters-2
+[11]: #findone
 
-[12]: #find
+[12]: #parameters-2
 
-[13]: #parameters-3
+[13]: #find
 
-[14]: #api
+[14]: #parameters-3
 
-[15]: #examples
+[15]: #api
 
-[16]: #scrollmap
+[16]: #examples
 
-[17]: #navbar
+[17]: #scrollmap
 
-[18]: #parameters-4
+[18]: #navbar
 
-[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[19]: #parameters-4
 
-[20]: https://developer.mozilla.org/docs/Web/HTML/Element
+[20]: #findsubnavfolderbyindex
 
-[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[21]: #parameters-5
 
-[22]: https://developer.mozilla.org/docs/Web/API/NodeList
+[22]: #bindevents
 
-[23]: https://developer.mozilla.org/docs/Web/API/Element
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[24]: https://developer.mozilla.org/docs/Web/HTML/Element
+
+[25]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[26]: https://developer.mozilla.org/docs/Web/API/NodeList
+
+[27]: https://developer.mozilla.org/docs/Web/API/Element
+
+[28]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
