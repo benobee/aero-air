@@ -3,42 +3,50 @@
 ### Table of Contents
 
 -   [App][1]
-    -   [init][2]
-    -   [registerAPIControllers][3]
-    -   [subnav][4]
--   [Controller][5]
-    -   [elementIsActive][6]
+    -   [registerAPIControllers][2]
+-   [Controller][3]
+    -   [elementIsActive][4]
+        -   [Parameters][5]
+    -   [watch][6]
         -   [Parameters][7]
-    -   [watch][8]
-        -   [Parameters][9]
--   [DOM][10]
-    -   [findOne][11]
-        -   [Parameters][12]
-    -   [find][13]
-        -   [Parameters][14]
--   [api][15]
-    -   [Examples][16]
--   [Scrollmap][17]
--   [navbar][18]
+-   [Element][8]
+    -   [findOne][9]
+    -   [on][10]
+        -   [Parameters][11]
+    -   [toggleClass][12]
+        -   [Parameters][13]
+    -   [addClass][14]
+        -   [Parameters][15]
+    -   [removeClass][16]
+        -   [Parameters][17]
+-   [dom][18]
     -   [Parameters][19]
--   [bindEvents][20]
+-   [api][20]
+    -   [Examples][21]
+-   [Scrollmap][22]
+-   [navbar][23]
+    -   [Parameters][24]
+-   [subnav][25]
+    -   [getParameter][26]
+        -   [Parameters][27]
+    -   [parseUrl][28]
+    -   [cacheDOM][29]
+        -   [Parameters][30]
+    -   [pushInitialState][31]
+    -   [subscriptions][32]
+    -   [findSubnavIndex][33]
+        -   [Parameters][34]
+    -   [bindEvents][35]
 
 ## App
 
 the main object for housing all
 methods, events, and objects
 
-### init
-
-The main initializing method for
-establishign pub / sub events
-
 ### registerAPIControllers
 
 Method for registering controllers
 throught the controller module
-
-### subnav
 
 ## Controller
 
@@ -51,9 +59,9 @@ Tests whether the node is active in the DOM
 
 #### Parameters
 
--   `query` **[String][21]** query selector
+-   `query` **[String][36]** query selector
 
-Returns **[HTMLElement][22]** DOM Node
+Returns **[HTMLElement][37]** DOM Node
 
 ### watch
 
@@ -61,31 +69,58 @@ emit event when the DOM element is active
 
 #### Parameters
 
--   `array` **[Array][23]** list of nodes
+-   `array` **[Array][38]** list of nodes
 
-## DOM
-
-a simple DOM caching module
+## Element
 
 ### findOne
 
-returns only one element
+returns only the root DOM element
+
+Returns **[HTMLElement][37]** 
+
+### on
+
+method for binding dom events. useful for binding multiple
+elements within a node list.
 
 #### Parameters
 
--   `query` **[String][21]** the dom selector
+-   `type` **[String][36]** the event type
+-   `callback` **[Object][39]** the function to execute on listener trigger
 
-Returns **[HTMLElement][22]** 
-
-### find
-
-returns an a node list of all available elements
+### toggleClass
 
 #### Parameters
 
--   `query` **[String][21]** the dom selector
+-   `className` **[String][36]** the name of the class toggle
 
-Returns **[NodeList][24]** 
+Returns **[Object][39]** 
+
+### addClass
+
+#### Parameters
+
+-   `className` **[String][36]** the class name to add
+
+Returns **[Object][39]** 
+
+### removeClass
+
+#### Parameters
+
+-   `className` **[String][36]** the class name to remove
+
+Returns **[Object][39]** 
+
+## dom
+
+### Parameters
+
+-   `query` **[String][36]** the initial selector to
+    use for creating the Element object
+
+Returns **[Object][39]** the element object
 
 ## api
 
@@ -114,58 +149,138 @@ module for readability
 
 ### Parameters
 
--   `parent` **[Element][25]** the root element bound to the controller
+-   `parent` **[Element][40]** the root element bound to the controller
 
-## bindEvents
+## subnav
+
+### getParameter
+
+gets the value from the parameter name
+in the url search
+
+#### Parameters
+
+-   `paramName` **[String][36]** url search name
+
+Returns **[String][36]** 
+
+### parseUrl
+
+method for extacting the search query from the url
+to make selected subnav or pages active within
+the index
+
+### cacheDOM
+
+Caching elements for quicker use
+
+#### Parameters
+
+-   `el` **[Object][39]** the parent DOM element
+
+### pushInitialState
+
+For the history api that has no state stored
+the first first imems in the subnav and index
+will be made active. If however the url has
+parameters, those items will be active
+
+### subscriptions
+
+subscription events for binding listeners
+
+### findSubnavIndex
+
+finds the index value of the markdown list
+
+#### Parameters
+
+-   `el` **[HTMLElement][37]** item in list element
+
+Returns **[Number][41]** 
+
+### bindEvents
 
 bind all DOM events for the subnav
 
 [1]: #app
 
-[2]: #init
+[2]: #registerapicontrollers
 
-[3]: #registerapicontrollers
+[3]: #controller
 
-[4]: #subnav
+[4]: #elementisactive
 
-[5]: #controller
+[5]: #parameters
 
-[6]: #elementisactive
+[6]: #watch
 
-[7]: #parameters
+[7]: #parameters-1
 
-[8]: #watch
+[8]: #element
 
-[9]: #parameters-1
+[9]: #findone
 
-[10]: #dom
+[10]: #on
 
-[11]: #findone
+[11]: #parameters-2
 
-[12]: #parameters-2
+[12]: #toggleclass
 
-[13]: #find
+[13]: #parameters-3
 
-[14]: #parameters-3
+[14]: #addclass
 
-[15]: #api
+[15]: #parameters-4
 
-[16]: #examples
+[16]: #removeclass
 
-[17]: #scrollmap
+[17]: #parameters-5
 
-[18]: #navbar
+[18]: #dom
 
-[19]: #parameters-4
+[19]: #parameters-6
 
-[20]: #bindevents
+[20]: #api
 
-[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[21]: #examples
 
-[22]: https://developer.mozilla.org/docs/Web/HTML/Element
+[22]: #scrollmap
 
-[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[23]: #navbar
 
-[24]: https://developer.mozilla.org/docs/Web/API/NodeList
+[24]: #parameters-7
 
-[25]: https://developer.mozilla.org/docs/Web/API/Element
+[25]: #subnav
+
+[26]: #getparameter
+
+[27]: #parameters-8
+
+[28]: #parseurl
+
+[29]: #cachedom
+
+[30]: #parameters-9
+
+[31]: #pushinitialstate
+
+[32]: #subscriptions
+
+[33]: #findsubnavindex
+
+[34]: #parameters-10
+
+[35]: #bindevents
+
+[36]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[37]: https://developer.mozilla.org/docs/Web/HTML/Element
+
+[38]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[39]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[40]: #element
+
+[41]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number

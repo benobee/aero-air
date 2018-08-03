@@ -7,7 +7,6 @@ const events = new PubSub();
 
 /**
  * @name subnav
- * @memberof App
  */
 const subnav = {
     init (el) {
@@ -23,7 +22,7 @@ const subnav = {
      * gets the value from the parameter name
      * in the url search
      * @param {String} paramName url search name
-     * @private
+     * @memberof subnav
      * @returns {String}
      */
     getParameter (paramName) {
@@ -44,7 +43,7 @@ const subnav = {
      * method for extacting the search query from the url
      * to make selected subnav or pages active within
      * the index
-     * @private
+     * @memberof subnav
      */
     parseUrl () {
         this.currentIndex = this.getParameter("index");
@@ -68,7 +67,7 @@ const subnav = {
     /**
      * Caching elements for quicker use
      * @param {Object} el the parent DOM element
-     * @private
+     * @memberof subnav
      */
     cacheDOM (el) {
         this.parent = el.querySelector(".Index");
@@ -83,7 +82,7 @@ const subnav = {
      * the first first imems in the subnav and index
      * will be made active. If however the url has
      * parameters, those items will be active
-     * @private
+     * @memberof subnav
      */
     pushInitialState () {
         this.subnav[ 0 ].classList.add("active");
@@ -93,7 +92,7 @@ const subnav = {
 
     /**
      * subscription events for binding listeners
-     * @private
+     * @memberof subnav
      */
     subscriptions () {
         events.on("url-change", (data) => {
@@ -110,7 +109,7 @@ const subnav = {
      * finds the index value of the markdown list
      * @param {HTMLElement} el item in list element
      * @returns {Number}
-     * @private
+     * @memberof subnav
      */
     findSubnavIndex (el) {
         let itemIndex = null;
@@ -137,6 +136,7 @@ const subnav = {
 
     /**
      * bind all DOM events for the subnav
+     * @memberof subnav
      */
     bindEvents () {
         this.subnav.forEach((item) => {

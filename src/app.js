@@ -8,9 +8,9 @@ import api from "./api/api";
  */
 const App = {
     /**
-     * The main initializing method for
-     * establishign pub / sub events
+     * The main initializing method
      * @memberof App
+     * @private
      */
     init () {
         // run subscription events
@@ -27,17 +27,17 @@ const App = {
      */
     registerAPIControllers () {
         controller.watch([{
-                name: "navbar",
-                el: ".Header.Header--top"
-            },
-            {
-                name: "homepage",
-                el: "#collection-5b3a7db62b6a28e875d2d759"
-            },
-            {
-                name: "portal",
-                el: "#collection-5b589a3e758d46c96f04f595"
-            }
+            name: "navbar",
+            el: ".Header.Header--top"
+        },
+        {
+            name: "homepage",
+            el: "#collection-5b3a7db62b6a28e875d2d759"
+        },
+        {
+            name: "portal",
+            el: "#collection-5b589a3e758d46c96f04f595"
+        }
         ]);
     }
 };
